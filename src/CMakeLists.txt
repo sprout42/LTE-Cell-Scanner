@@ -3,9 +3,9 @@ add_library(LTE_MISC capbuf.cpp constants.cpp itpp_ext.cpp macros.cpp searcher.c
 
 SET (common_link_libs ${Boost_LIBRARIES} ${Boost_THREAD_LIBRARY} ${LAPACK_LIBRARIES} ${FFTW_LIBRARIES} ${CURSES_LIBRARIES})
 
-IF ( OPENCL_FOUND )
-  LIST(APPEND common_link_libs ${OPENCL_LIBRARIES})
-ENDIF ( OPENCL_FOUND )
+IF ( OpenCL_FOUND )
+  LIST(APPEND common_link_libs ${OpenCL_LIBRARIES})
+ENDIF ( OpenCL_FOUND )
 
 IF ( HACKRF_FOUND )
   LIST(APPEND common_link_libs ${HACKRF_LIBRARIES})
